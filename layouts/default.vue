@@ -29,7 +29,6 @@
         @click.stop="drawer = !drawer"
         class="hidden-md-and-up"
       />
-      <v-spacer class="hidden-md-and-up"></v-spacer>
       <v-toolbar-title class="nav-logo-container pr-4" to="/">
         <img
           class="nav-logo hidden-xs-only"
@@ -42,11 +41,12 @@
         v-for="(item, i) in items"
         :key="i"
         :to="item.to"
+        class="hidden-sm-and-down"
         text
         router
         exact
       >
-        <v-icon class="pr-2">{{ item.icon }}</v-icon>
+        <v-icon class="pr-1">{{ item.icon }}</v-icon>
         {{ item.title }}
       </v-btn>
     </v-app-bar>
