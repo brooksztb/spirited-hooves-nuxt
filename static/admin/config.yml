@@ -1,5 +1,6 @@
 backend:
   name: github
+  repo: brooksztb/spirited-hooves-nuxt
   branch: master
 
 media_folder: static/img
