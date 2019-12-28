@@ -1,7 +1,5 @@
 import colors from 'vuetify/es5/util/colors'
 
-const PrismicConfig = require('./prismic.config')
-
 export default {
   mode: 'universal',
   /*
@@ -9,7 +7,8 @@ export default {
    */
   head: {
     titleTemplate: '%s - ' + process.env.npm_package_name,
-    title: process.env.npm_package_name || '',
+    title:
+      process.env.npm_package_name || 'Spirited Hooves: Horse and Goat Farm',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -20,16 +19,7 @@ export default {
       }
     ],
     link: [
-      { rel: 'icon', type: 'image/svg', href: '/spiritedhooves-logo.svg' }
-    ],
-    script: [
-      {
-        innerHTML:
-          '{ window.prismic = { endpoint: "' +
-          PrismicConfig.apiEndpoint +
-          '"} }'
-      },
-      { src: '//static.cdn.prismic.io/prismic.min.js' }
+      { rel: 'icon', type: 'image/svg', href: '/img/spiritedhooves-logo.svg' }
     ],
     __dangerouslyDisableSanitizers: ['script']
   },
@@ -44,7 +34,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['~/plugins/prismic-vue.js'],
+  plugins: [],
   /*
    ** Nuxt.js dev-modules
    */
@@ -85,8 +75,6 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {
-      config.resolve.alias['vue'] = 'vue/dist/vue.common'
-    }
+    extend(config, ctx) {}
   }
 }

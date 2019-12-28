@@ -32,7 +32,7 @@
       <v-toolbar-title class="nav-logo-container pr-4" to="/">
         <img
           class="nav-logo hidden-xs-only"
-          src="@/static/spiritedhooves-logo.svg"
+          src="@/static/img/spiritedhooves-logo.svg"
           alt=""
         />
         {{ title }}
